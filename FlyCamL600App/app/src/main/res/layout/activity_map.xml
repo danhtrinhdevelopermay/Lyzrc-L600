@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView android:id="@+id/tv_drone_coords" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Drone: 0, 0" android:textSize="12sp" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/btn_set_home" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="Set Home" android:layout_marginEnd="4dp" />
+            <Button android:id="@+id/btn_go_home" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="Go Home" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/btn_add_waypoint" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="Add Waypoint" android:layout_marginEnd="4dp" />
+            <Button android:id="@+id/btn_clear_waypoints" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="Clear" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/btn_start_mission" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="Start Mission" android:layout_marginEnd="4dp" />
+            <Button android:id="@+id/btn_altitude_control" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="Altitude" />
+        </LinearLayout>
+
+        <TextView android:id="@+id/tv_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Status: Ready" android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

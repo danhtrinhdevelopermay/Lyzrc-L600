@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView android:id="@+id/tv_battery_level" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Battery: 100%" />
+        <TextView android:id="@+id/tv_altitude" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Altitude: 0m" />
+        <TextView android:id="@+id/tv_speed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Speed: 0m/s" />
+        <TextView android:id="@+id/tv_signal_strength" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Signal: 100%" />
+        <TextView android:id="@+id/tv_flight_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Flight Time: 0s" />
+        <TextView android:id="@+id/tv_gps_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GPS: 0 satellites" android:layout_marginBottom="16dp" />
+
+        <Button android:id="@+id/btn_takeoff" android:layout_width="match_parent" android:layout_height="48dp" android:text="Takeoff" android:layout_marginBottom="8dp" />
+        <Button android:id="@+id/btn_land" android:layout_width="match_parent" android:layout_height="48dp" android:text="Land" android:layout_marginBottom="8dp" />
+        <Button android:id="@+id/btn_emergency_stop" android:layout_width="match_parent" android:layout_height="48dp" android:text="Emergency Stop" android:layout_marginBottom="8dp" android:backgroundTint="@android:color/holo_red_light" />
+        <Button android:id="@+id/btn_return_home" android:layout_width="match_parent" android:layout_height="48dp" android:text="Return Home" android:layout_marginBottom="16dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Throttle Control" android:textStyle="bold" />
+        <SeekBar android:id="@+id/sb_throttle" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="100" android:layout_marginBottom="8dp" />
+        <TextView android:id="@+id/tv_throttle_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Throttle: 0%" android:layout_marginBottom="16dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rotation Control" android:textStyle="bold" />
+        <SeekBar android:id="@+id/sb_rotation" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="100" android:layout_marginBottom="8dp" />
+        <TextView android:id="@+id/tv_rotation_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rotation: 0°" android:layout_marginBottom="16dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Flight Mode" android:textStyle="bold" />
+        <RadioGroup android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp">
+            <RadioButton android:id="@+id/rb_gps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GPS Mode" android:checked="true" />
+            <RadioButton android:id="@+id/rb_optical_flow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Optical Flow" />
+        </RadioGroup>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gimbal Tilt" android:textStyle="bold" />
+        <SeekBar android:id="@+id/sb_gimbal_tilt" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="100" android:layout_marginBottom="8dp" />
+
+    </LinearLayout>
+</ScrollView>
